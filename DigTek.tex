@@ -1,3 +1,4 @@
+% Oppsett, ikke noe å bry seg om.
 \documentclass[12pt,norsk,a4paper]{article}
 \usepackage{graphicx}
 \usepackage{hyperref}
@@ -7,7 +8,7 @@
 \usepackage[norsk]{babel}
 
 \begin {document}
-\title{Labrapport - Digtek lol edit meg}
+\title{Labrapport - Digtek lol edit meg} 
 \author {ARVE JUUL OG RUBENZ}
 
 \maketitle
@@ -16,7 +17,7 @@
 
 
 
-\section*{Forside}
+\section*{Forside} % Stjerne etter section -> Siden tas ikke med når latex teller sidetall
 Forside\
 skriv her
 \clearpage
@@ -25,12 +26,12 @@ skriv her
 \section*{Sammendrag}
 SAMMENDRAG\
 skriv her
+\clearpage % Clearpage -> ny side.
+
+\tableofcontents %Innholdsfortegnelse. Genereres automatisk. :)
 \clearpage
 
-\tableofcontents
-\clearpage
-
-\section{Innledning}
+\section{Innledning} 
 INNLEDNING\
 skriv her
 \clearpage
@@ -41,8 +42,8 @@ main section text
     subsection text
     \subsection{EXAMPLE SUBSECTION2}
 
-        \begin{equation}
-            \label{eq:magnetfelt-spole}
+        \begin{equation} %Eksempel på likning. Denne får (1) bak seg.
+            \label{eq:magnetfelt-spole} %Label lar deg referere til likningen.
             B(x) = \frac{\mu_0 N I}{2R} \Bigg(1 + \frac{x^2}{R^2} \Bigg) 
         \end{equation}
 \clearpage
@@ -51,9 +52,9 @@ main section text
 \clearpage
 
 
-\section{Utstyrsliste}
-    \begin{itemize}
-    \item liste
+\section{Utstyrsliste} 
+    \begin{itemize} %Punktliste
+    \item liste     %Punkt i listen
     \item for
     \item eksempel
     \end{itemize}
@@ -65,12 +66,12 @@ main section text
 \subsection{Egen subsection for hver oppgavedel}
 
 
-\begin{table}[H]
+\begin{table}[H] %Eksempel på tabell.
 \begin{center}
-	\begin{tabular}{ | r | c |}
+	\begin{tabular}{ | r | c |} %Tegn opp kolonner med bar ( | ), og ha r/c/l for right/center/left tekts-justering i tilsvarende kollonn
 	\hline
-	$X(cm )\pm0,2cm$  &$B(mT)\pm(0,3mT+1\%$) \\ \hline
-    1 & 0,95\\ \hline
+	$X(cm )\pm0,2cm$  &$B(mT)\pm(0,3mT+1\%$) \\ \hline %$formel$ inline "mattemodus" - når du ikke gidder \begin{equation} osv.
+    1 & 0,95\\ \hline   % \hline -> horizontal line -> ny linje i tabellen
     2 & 0,84\\ \hline
     3 & 0,71\\ \hline
     4 & 0,64\\ \hline
