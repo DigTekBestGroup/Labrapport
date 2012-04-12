@@ -12,11 +12,10 @@
 - Forside
 - Tittelside
 - Resultater
-
 - Tilbakemelding
+
 ##Sammen
 - Sammendrag
 - diskusjon
 - konklusjon
 - Referanser
-- Tilbakemeldinger
