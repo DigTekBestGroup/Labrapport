@@ -10,7 +10,7 @@
 ##Arve
 - Innleding
 - Forside
-- Tittelside
+- ~~Tittelside~~
 - Resultater
 - Tilbakemelding
 

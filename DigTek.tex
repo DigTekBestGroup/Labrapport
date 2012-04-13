@@ -3,37 +3,39 @@
 \usepackage{graphicx}
 \usepackage{hyperref}
 \usepackage{float}
+\usepackage{pdfpages}
 \usepackage{ulem}
 \usepackage[utf8]{inputenc}
 \usepackage[norsk]{babel}
 \usepackage{multirow}
 \usepackage{colortbl}
 \usepackage{array}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
 
 \begin {document}
-\title{Labrapport - Digtek lol edit meg} 
-\author {ARVE JUUL OG RUBENZ}
-
-\maketitle
-
+\includepdf{titlepage}
 \clearpage
 
 
 
 \section*{Tittelside} % Stjerne etter section -> Siden tas ikke med når latex teller sidetall
+\thispagestyle{empty}   
 skriv her
 \clearpage
-\setcounter{page}{1}
 
 \section*{Sammendrag}
+\thispagestyle{empty}  
 SAMMENDRAG\
 Dette er en test!
 \clearpage % Clearpage -> ny side.
 
 \tableofcontents %Innholdsfortegnelse. Genereres automatisk. :)
+\thispagestyle{empty}   
 \clearpage
 
 \section{Innledning} 
+\setcounter{page}{1}
 INNLEDNING\
 skriv her
 \clearpage
