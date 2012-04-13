@@ -48,7 +48,7 @@ gir ut et trebits binærtall mellom 001 og 110, som er henholdsvis 1 og 6. Logik
 \end{figure}
 
     \subsection{Tilfeldig tallgenerator}
-    Den tilfeldige tallgeneratoren baser en teller som teller fra en til 6 i en evig loop. Dette skjer vet at når telleren overstiger verdien seks begynner den å telle på en igjen. Telleren blir klokket av en oscillator som svinger
+    Den tilfeldige tallgeneratoren baser en teller som teller fra 1 til 6 i en evig loop. Dette skjer vet at når telleren overstiger verdien seks begynner den å telle på en igjen. Telleren blir klokket av en oscillator som svinger
     veldig raskt, dette gjør at verdien til telleren skifter så fort at vi kan si det er tilfeldig hvilket tall som kommer ut når man slipper bryteren. Denne oscillatoren består av en NAND- og en NOR-port, i tillegg til noen motstandere og kondensatorer. Se figur under:
     \\
     \\
@@ -68,7 +68,7 @@ gir ut et trebits binærtall mellom 001 og 110, som er henholdsvis 1 og 6. Logik
     \end{figure}
 
     \subsection{Logikkken}
-    Logikken sin oppgave er å oversette signalene Q2-Q0 som representerer den binære verdien til hvilket tall terningen skal gi, til styresignalene S3-S0 som styrer lysene på terningen. Et poeng er å gjøre kretsen så effektiv som mulig, for å oppnå dette brukte vi Karnaugh-Diagram. Utledningen som ble gjørt er lagt ved som Vedlegg 1. En kort oppsumering av resultatet vises i tabellen under.
+    Logikken sin oppgave er å oversette signalene Q2-Q0 som representerer den binære verdien til hvilket tall terningen skal gi, til styresignalene S3-S0 som styrer lysene på terningen. Et poeng er å gjøre kretsen så effektiv som mulig, for å oppnå dette brukte vi Karnaugh-Diagram. Utledningen som ble gjørt er lagt ved som Vedlegg 1 og Vedlegg 2. En kort oppsumering av resultatet vises i tabellen under.
 
     \begin{table}[H] 
     \begin{center}
@@ -153,64 +153,83 @@ det var en gang en \textit{kursiv gris} og en  \textbf{bold ulv}
 \clearpage
 
 \section{Vedlegg}
+    \subsection{Vedlegg 1 sammenheng mellom binærverdi og styresignal. ARVE FIKS DEN DRITTEN SOM STIKKER UT AV TABELLEN ER DU SNILL :P}
+    \begin{table}[H]
+    \begin{center}
+    \begin{tabular}{|c|c|c|c|c|c|c|c|c|} \\ \hline
+    Hex & \multicolumn{3}{|c|}{Binærverdi} & \multicolumn{4}{|c|}{Styresignal}&hex \\ \hline
+    Q & $Q_2$ & $Q_1$ & $Q_0$ & $S_3$ & $S_2$ & $S_1$ & $S_0$ & S \\ \hline
+    0 & 0 & 0 & 0 & X & X & X & X & - \\ \hline 
+    1 & 0 & 0 & 1 & 1 & 1 & 1 & 0 & E \\ \hline
+    2 & 0 & 1 & 0 & 1 & 1 & 0 & 1 & D \\ \hline
+    3 & 0 & 1 & 1 & 1 & 1 & 0 & 0 & C \\ \hline
+    4 & 1 & 0 & 0 & 1 & 0 & 0 & 1 & 9 \\ \hline
+    5 & 1 & 0 & 1 & 1 & 0 & 0 & 0 & 8 \\ \hline
+    6 & 1 & 1 & 0 & 0 & 0 & 0 & 1 & 1 \\ \hline
+    7 & 1 & 1 & 1 & X & X & X & X & - \\ \hline
+    \end{tabular}
+    \end{center}
+    \caption{Resultat $S_0=\neg Q_0$}
+    \end{table}
 
-\begin{table}[H]
-\begin{center}
-\begin{tabular}{|l|l|r|r|} \hline
-\multicolumn{4}{|c|}{Tabell for $S_0$} \\ \hline
-$Q_2$ & $Q_1$ & \multicolumn{2}{|r|}{$Q_0$ \hspace{20 mm} 0 \hspace{2 mm} 1} \\ \hline
-0 & 0 & \hspace{27 mm} X \cellcolor[gray]{0.8} & 0 \\ \hline 
-0 & 1 & 1 \cellcolor[gray]{0.8} & 0 \\ \hline
-1 & 1 & 1 \cellcolor[gray]{0.8} & X \\ \hline
-1 & 0 & 1 \cellcolor[gray]{0.8} & 0 \\ \hline
-\end{tabular}
-\end{center}
-\caption{Resultat $S_0=\neg Q_0$}
-\end{table}
+    \subsection{Vedlegg 2 Karnaugh-Diagram}
+    \begin{table}[H]
+    \begin{center}
+    \begin{tabular}{|l|l|r|r|} \hline
+    \multicolumn{4}{|c|}{Tabell for $S_0$} \\ \hline
+    $Q_2$ & $Q_1$ & \multicolumn{2}{|r|}{$Q_0$ \hspace{20 mm} 0 \hspace{2 mm} 1} \\ \hline
+    0 & 0 & \hspace{27 mm} X \cellcolor[gray]{0.8} & 0 \\ \hline 
+    0 & 1 & 1 \cellcolor[gray]{0.8} & 0 \\ \hline
+    1 & 1 & 1 \cellcolor[gray]{0.8} & X \\ \hline
+    1 & 0 & 1 \cellcolor[gray]{0.8} & 0 \\ \hline
+    \end{tabular}
+    \end{center}
+    \caption{Resultat $S_0=\neg Q_0$}
+    \end{table}
 
 
-\begin{table}[H]
-\begin{center}
-\begin{tabular}{|l|l|r|r|} \hline
-\multicolumn{4}{|c|}{Tabell for $S_1$} \\ \hline
-$Q_2$ & $Q_1$ & \multicolumn{2}{|r|}{$Q_0$ \hspace{20 mm} 0 \hspace{2 mm} 1} \\ \hline
-0 & 0 & \hspace{27 mm} X \cellcolor[gray]{0.8} & \cellcolor[gray]{0.8} 1 \\ \hline 
-0 & 1 & 0 & 0 \\ \hline
-1 & 1 & 0 & X \\ \hline
-1 & 0 & 0 & 0 \\ \hline
-\end{tabular}
-\end{center}
-\caption{Resultat $S_1=\neg Q_2 \wedge \neg Q_1$}
-\end{table}
+    \begin{table}[H]
+    \begin{center}
+    \begin{tabular}{|l|l|r|r|} \hline
+    \multicolumn{4}{|c|}{Tabell for $S_1$} \\ \hline
+    $Q_2$ & $Q_1$ & \multicolumn{2}{|r|}{$Q_0$ \hspace{20 mm} 0 \hspace{2 mm} 1} \\ \hline
+    0 & 0 & \hspace{27 mm} X \cellcolor[gray]{0.8} & \cellcolor[gray]{0.8} 1 \\ \hline 
+    0 & 1 & 0 & 0 \\ \hline
+    1 & 1 & 0 & X \\ \hline
+    1 & 0 & 0 & 0 \\ \hline
+    \end{tabular}
+    \end{center}
+    \caption{Resultat $S_1=\neg Q_2 \wedge \neg Q_1$}
+    \end{table}
 
 
-\begin{table}[H]
-\begin{center}
-\begin{tabular}{|l|l|r|r|} \hline
-\multicolumn{4}{|c|}{Tabell for $S_2$} \\ \hline
-$Q_2$ & $Q_1$ & \multicolumn{2}{|r|}{$Q_0$ \hspace{20 mm} 0 \hspace{2 mm} 1} \\ \hline
-0 & 0 & \hspace{27 mm} X \cellcolor[gray]{0.8} & \cellcolor[gray]{0.8} 1 \\ \hline 
-0 & 1 & 1 \cellcolor[gray]{0.8} & 1 \cellcolor[gray]{0.8} \\ \hline
-1 & 1 & 0 & X \\ \hline
-1 & 0 & 0 & 0 \\ \hline
-\end{tabular}
-\end{center}
-\caption{Resultat $S_2=\neg Q_2$}
-\end{table}
+    \begin{table}[H]
+    \begin{center}
+    \begin{tabular}{|l|l|r|r|} \hline
+    \multicolumn{4}{|c|}{Tabell for $S_2$} \\ \hline
+    $Q_2$ & $Q_1$ & \multicolumn{2}{|r|}{$Q_0$ \hspace{20 mm} 0 \hspace{2 mm} 1} \\ \hline
+    0 & 0 & \hspace{27 mm} X \cellcolor[gray]{0.8} & \cellcolor[gray]{0.8} 1 \\ \hline 
+    0 & 1 & 1 \cellcolor[gray]{0.8} & 1 \cellcolor[gray]{0.8} \\ \hline
+    1 & 1 & 0 & X \\ \hline
+    1 & 0 & 0 & 0 \\ \hline
+    \end{tabular}
+    \end{center}
+    \caption{Resultat $S_2=\neg Q_2$}
+    \end{table}
 
-\begin{table}[H]
-\begin{center}
-\begin{tabular}{|l|l|r|r|} \hline
-\multicolumn{4}{|c|}{Tabell for $S_0$} \\ \hline
-$Q_2$ & $Q_1$ & \multicolumn{2}{|r|}{$Q_0$ \hspace{20 mm} 0 \hspace{2 mm} 1} \\ \hline
-0 & 0 & \hspace{27 mm} X \cellcolor[gray]{0.8} & \cellcolor[gray]{0.8} 1 \\ \hline 
-0 & 1 & 1 \cellcolor[gray]{0.8} & 1 \cellcolor[gray]{0.8} \\ \hline
-1 & 1 & 0 & X \\ \hline
-1 & 0 & 1 \cellcolor[gray]{0.8} & 1 \cellcolor[gray]{0.8} \\ \hline
-\end{tabular}
-\end{center}
-\caption{Resultat $S_3=\neg Q_2 + \neg Q_1$}
-\end{table}
+    \begin{table}[H]
+    \begin{center}
+    \begin{tabular}{|l|l|r|r|} \hline
+    \multicolumn{4}{|c|}{Tabell for $S_0$} \\ \hline
+    $Q_2$ & $Q_1$ & \multicolumn{2}{|r|}{$Q_0$ \hspace{20 mm} 0 \hspace{2 mm} 1} \\ \hline
+    0 & 0 & \hspace{27 mm} X \cellcolor[gray]{0.8} & \cellcolor[gray]{0.8} 1 \\ \hline 
+    0 & 1 & 1 \cellcolor[gray]{0.8} & 1 \cellcolor[gray]{0.8} \\ \hline
+    1 & 1 & 0 & X \\ \hline
+    1 & 0 & 1 \cellcolor[gray]{0.8} & 1 \cellcolor[gray]{0.8} \\ \hline
+    \end{tabular}
+    \end{center}
+    \caption{Resultat $S_3=\neg Q_2 + \neg Q_1$}
+    \end{table}
 
 \clearpage
 
