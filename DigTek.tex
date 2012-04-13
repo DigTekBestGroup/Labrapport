@@ -37,8 +37,13 @@ Etter å ha kommet frem til et design på papiret, ble kretsene loddet opp og te
 
 \section{Innledning} 
 \setcounter{page}{1}
-INNLEDNING\
-skriv her
+I dette eksperimentet skal gruppen designe, koble opp, og teste en digital krets som representerer en terning. Det skal først lages en skjematisk fremstilling av kretsen [fig. \ref{fig:kretskortet}], før denne loddes opp med fysiske komponenter. \\
+\\
+Terningen skal fungere på følgende måte: Du trykker ned en knapp for å rulle terningen. Når knappen er presset inn, vil tallgeneratoren rullere mellom verdiene 1-6, med svært høy hastighet. Når knappen slippes, stopper generatoren opp på nåværende tall, og vises ved hjelp av lysidodene. Det er kritisk at tallgeneratoren rullerer mellom verdier raskt nok til at det blir umulig for et menneske å forutsi hvilken verdi vil få.\\
+\\
+Terningen består av tre hoveddeler [fig. \ref{fig:blokkskjema}]: En tilfeldig tallgenerator, logikk som konverterer tallet til et mønster, og lysdioder som viser dette mønsteret. Virkemåten til disse delene er forklart under teoridelen av rapporten.
+
+
 \clearpage
 
 \section{Teoretisk grunnlag}
@@ -52,7 +57,7 @@ gir ut et trebits binærtall mellom 001 og 110, som er henholdsvis 1 og 6. Logik
 
     \subsection{Tilfeldig tallgenerator}
     Den tilfeldige tallgeneratoren baser en teller som teller fra 1 til 6 i en evig loop. Dette skjer vet at når telleren overstiger verdien seks begynner den å telle på en igjen. Telleren blir klokket av en oscillator som svinger
-    veldig raskt, dette gjør at verdien til telleren skifter så fort at vi kan si det er tilfeldig hvilket tall som kommer ut når man slipper bryteren. Denne oscillatoren består av en NAND- og en NOR-port, i tillegg til noen motstandere og kondensatorer. Se figur under:
+    veldig raskt, dette gjør at verdien til telleren skifter så fort at vi kan si det er tilfeldig hvilket tall som kommer ut når man slipper bryteren. Denne oscillatoren består av en NAND- og en NOR-port, i tillegg til noen motstander og kondensatorer. Se figur under:
     \\
     \\
     \textbf{Her burde vi kanskje ha et bilde?} 
@@ -94,7 +99,7 @@ gir ut et trebits binærtall mellom 001 og 110, som er henholdsvis 1 og 6. Logik
     \begin{figure}[H]
     \includegraphics[scale=0.75]{Krestkortet.png}
     \caption{Sammenhengen mellom bitverdiene og styresignalende}
-    \label{fig:krestkortet}
+    \label{fig:kretskortet}
     \end{figure}
 
     Som en ser på bilde har vi lagd inverterere ved å koble samme inngangsignal i begge inngangene på en NAND- eller NOR-port. Vi kunne oppnådd samme effekt dersom vi koblet en av inngangene til jord.    
@@ -115,48 +120,19 @@ gir ut et trebits binærtall mellom 001 og 110, som er henholdsvis 1 og 6. Logik
 
 
 \section{Resultater}
+Gruppen fikk ferdigstillt og testet to terningkretser. Den 3. terningen ble ikke ferdig.
+Denne kretsen er designet for å drives av 5V strom. Gruppen rakk ikke å lage batteriadapter.
 
-Heiheihei
-LOLOL
-LOLOL
-det var en gang en \textit{kursiv gris} og en  \textbf{bold ulv}
-\subsection{Egen subsection for hver oppgavedel}
-
-
-\begin{table}[H] %Eksempel på tabell.
-\begin{center}
-	\begin{tabular}{ | r | c |} %Tegn opp kolonner med bar ( | ), og ha r/c/l for right/center/left tekts-justering i tilsvarende kollonn
-	\hline
-	$X(cm )\pm0,2cm$  &$B(mT)\pm(0,3mT+1\%$) \\ \hline %$formel$ inline "mattemodus" - når du ikke gidder \begin{equation} osv.
-    1 & 0,95\\ \hline   % \hline -> horizontal line -> ny linje i tabellen
-    2 & 0,84\\ \hline
-    3 & 0,71\\ \hline
-    4 & 0,64\\ \hline
-    5 & 0,54\\ \hline
-    10 & 0,21\\ \hline
-    15 & 0,09\\ \hline
-    20 & 0,03\\ \hline
-    30 & 0,00\\ \hline
-    \hline
-    \end{tabular}
-    \end{center}
-    \caption{Eksempel på tabell}
-
-\end{table}
 \clearpage
 
 \section{Diskusjon}
 \clearpage
 
 \section{Konklusjon}
-        \begin{equation} %Eksempel på likning. Denne får (1) bak seg.
-            \label{eq:magnetfelt-spole} %Label lar deg referere til likningen.
-            B(x) = \frac{\mu_0 N I}{2R} \Bigg(1 + \frac{x^2}{R^2} \Bigg) 
-        \end{equation}
 \clearpage
 
 \section{Vedlegg}
-    \subsection{Vedlegg 1 sammenheng mellom binærverdi og styresignal. ARVE FIKS DEN DRITTEN SOM STIKKER UT AV TABELLEN ER DU SNILL :P}
+    \subsection{Vedlegg 1: sammenheng mellom binærverdi og styresignal.}
     \begin{table}[H]
     \begin{center}
     \begin{tabular}{|c|c|c|c|c|c|c|c|c|}
@@ -175,8 +151,9 @@ det var en gang en \textit{kursiv gris} og en  \textbf{bold ulv}
     \end{center}
     \caption{Resultat $S_0=\neg Q_0$}
     \end{table}
+    \clearpage
 
-    \subsection{Vedlegg 2 Karnaugh-Diagram}
+    \subsection{Vedlegg 2: Karnaugh-Diagram}
     \begin{table}[H]
     \begin{center}
     \begin{tabular}{|l|l|r|r|} \hline
@@ -241,5 +218,8 @@ det var en gang en \textit{kursiv gris} og en  \textbf{bold ulv}
 \clearpage
 
 \section{Tilbakemeldinger}
+Det hadde vært kjekt om det var klargjort batteriadapter til denne oppgaven. Enten bare en ferdiglaget adapter, eller at dette ble tatt med som en del av oppgaven. Kanskje designet av en kunne vært med som forhåndsoppgave.\\
+\\
+Ellers synes alle på gruppen at dette var en morsom lab! Kjekt å få med seg en selvprodusert digital terning hjem!
 \clearpage
 \end{document}

@@ -8,12 +8,12 @@
 - Teoridel
 
 ##Arve
-- ~~Sammendrag~~
-- Innleding
 - ~~Forside~~
 - ~~Tittelside~~
-- Resultater
-- Tilbakemelding
+- ~~Sammendrag~~
+- ~~Innleding~~
+- ~~Resultater~
+- ~~Tilbakemelding~
 
 ##Sammen
 
