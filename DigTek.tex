@@ -10,8 +10,6 @@
 \usepackage{multirow}
 \usepackage{colortbl}
 \usepackage{array}
-\usepackage{fancyhdr}
-\pagestyle{fancy}
 
 \begin {document}
 \includepdf{titlepage}
@@ -19,16 +17,19 @@
 
 
 
-\section*{Tittelside} % Stjerne etter section -> Siden tas ikke med når latex teller sidetall
+\section*{} % Stjerne etter section -> Siden tas ikke med når latex teller sidetall
 \thispagestyle{empty}   
-skriv her
+\begin{center}
+\Large \textsc{Labrapport: Lab 3 - Terning}
+\end{center}
 \clearpage
 
 \section*{Sammendrag}
 \thispagestyle{empty}  
-SAMMENDRAG\
-Dette er en test!
-\clearpage % Clearpage -> ny side.
+I denne rapporten blir det beskrevet hvordan gruppen utførte en laboppgave hvor målet var å lage en digital krets, ved hjelp av diskrete portkretser, som styrer lysdioder slik at de danner mønstrene til en vanlig sekssidet terning. Et viktig poeng er at terningen skal ha en uniform verdidistribusjon, slik at den oppfører seg som en virkelig terning.
+
+Etter å ha kommet frem til et design på papiret, ble kretsene loddet opp og testet. Gruppen fikk produsert to kretser som viste tilfeldige terningmønstre, som etter 60 testkjøringer viste seg å ha en uniform distribusjon av verdier. Et tredje kretskort ble startet på, men ikke fullført i tide.
+\clearpage
 
 \tableofcontents %Innholdsfortegnelse. Genereres automatisk. :)
 \thispagestyle{empty}   

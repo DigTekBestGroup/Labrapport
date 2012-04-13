@@ -8,14 +8,15 @@
 - Teoridel
 
 ##Arve
+- ~~Sammendrag~~
 - Innleding
-- Forside
+- ~~Forside~~
 - ~~Tittelside~~
 - Resultater
 - Tilbakemelding
 
 ##Sammen
-- Sammendrag
+
 - diskusjon
 - konklusjon
 - Referanser
