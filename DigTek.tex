@@ -26,8 +26,9 @@
 
 \section*{Sammendrag}
 \thispagestyle{empty}  
-I denne rapporten blir det beskrevet hvordan gruppen utførte en laboppgave hvor målet var å lage en digital krets, ved hjelp av diskrete portkretser, som styrer lysdioder slik at de danner mønstrene til en vanlig sekssidet terning. Et viktig poeng er at terningen skal ha en uniform verdidistribusjon, slik at den oppfører seg som en virkelig terning.
 
+I denne rapporten blir det beskrevet hvordan gruppen utførte en laboppgave hvor målet var å lage en digital krets, ved hjelp av diskrete portkretser, som styrer lysdioder slik at de danner mønstrene til en vanlig sekssidet terning. Et viktig poeng er at terningen skal ha en uniform verdidistribusjon, slik at den oppfører seg som en virkelig terning.\\
+\\
 Etter å ha kommet frem til et design på papiret, ble kretsene loddet opp og testet. Gruppen fikk produsert to kretser som viste tilfeldige terningmønstre, som etter 60 testkjøringer viste seg å ha en uniform distribusjon av verdier. Et tredje kretskort ble startet på, men ikke fullført i tide.
 \clearpage
 
@@ -122,8 +123,26 @@ Det aller første som må gjøres i denne laben er å lodde på alle komponenten
 
 
 \section{Resultater}
-Gruppen fikk ferdigstillt og testet to terningkretser. Den 3. terningen ble ikke ferdig.
+Gruppen fikk ferdigstillt og testet (Tabell \ref{tbl:probabilitetsdistribusjon}) to terningkretser. Den 3. terningen ble ikke ferdig.
 Denne kretsen er designet for å drives av 5V strom. Gruppen rakk ikke å lage batteriadapter.
+
+\begin{table}[H]
+    \begin{center}
+    \begin{tabular}{|c|c|}
+    \hline
+    Verdi & Antall ganger\\ \hline
+    1 & 13 \\ \hline
+    2 & 8  \\ \hline
+    3 & 10 \\ \hline
+    4 & 8  \\ \hline
+    5 & 10 \\ \hline
+    6 & 11 \\ \hline
+    \end{tabular}
+    \caption{Probabilitetsdistribusjon}
+    \label{tbl:probabilitetsdistribusjon}
+    \end{center}
+    \caption{Resultat $S_0=\neg Q_0$}
+    \end{table}
 
 \clearpage
 
@@ -139,7 +158,7 @@ Denne kretsen er designet for å drives av 5V strom. Gruppen rakk ikke å lage b
     \begin{center}
     \begin{tabular}{|c|c|c|c|c|c|c|c|c|}
     \hline
-    Hex & \multicolumn{3}{|c|}{Binærverdi} & \multicolumn{4}{|c|}{Styresignal}&hex \\ \hline
+    Hex & \multicolumn{3}{c}{Binærverdi} & \multicolumn{4}{|c|}{Styresignal}&hex \\ \hline
     $Q$ & $Q_2$ & $Q_1$ & $Q_0$ & $S_3$ & $S_2$ & $S_1$ & $S_0$ & $S$ \\ \hline
     0 & 0 & 0 & 0 & X & X & X & X & - \\ \hline 
     1 & 0 & 0 & 1 & 1 & 1 & 1 & 0 & E \\ \hline
