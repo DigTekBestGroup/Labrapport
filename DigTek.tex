@@ -123,9 +123,11 @@ Det aller første som må gjøres i denne laben er å lodde på alle komponenten
 
 
 \section{Resultater}
-Gruppen fikk ferdigstillt og testet (Tabell \ref{tbl:probabilitetsdistribusjon}) to terningkretser. Den 3. terningen ble ikke ferdig.
-Denne kretsen er designet for å drives av 5V strom. Gruppen rakk ikke å lage batteriadapter.
+Gruppen fikk ferdigstilt og testet to terningkretser. 
 
+
+
+Tabell [\ref{probabilitetsdistribusjon}] viser resultatet av 60 kast.
 \begin{table}[H]
     \begin{center}
     \begin{tabular}{|c|c|}
@@ -138,10 +140,25 @@ Denne kretsen er designet for å drives av 5V strom. Gruppen rakk ikke å lage b
     5 & 10 \\ \hline
     6 & 11 \\ \hline
     \end{tabular}
-    \caption{Probabilitetsdistribusjon}
+    \caption{Probabilitetsdistribusjon etter 60 'kast' på den første terningen.}
     \label{tbl:probabilitetsdistribusjon}
     \end{center}
-    \caption{Resultat $S_0=\neg Q_0$}
+    \end{table}
+
+
+\begin{table}[H]
+    \begin{center}
+    \begin{tabular}{|c|c|c|}
+    \hline
+    Pinne & $\frac{T_H}{T_D}$ (ms) & Probabilitet   \\[1mm] \hline
+    $S_0$ & $\frac{1.13}{2.26}$  & $\frac{1}{2}$    \\[1mm] \hline
+    $S_1$ & $\frac{1.13}{6.78}$  & $\frac{1}{6}$    \\[1mm] \hline
+    $S_2$ & $\frac{3.39}{6.78}$  & $\frac{1}{2}$    \\[1mm]\hline
+    $S_3$ & $\frac{5.65}{6.78}$  & $\frac{5}{6}$    \\[1mm] \hline
+    \end{tabular}
+    \caption{Probabilitetsdistribusjon for pinnene $S_0 - S_3$  på kretsen som styrer lysdiodene}
+    \label{tbl:probabilitetsdistribusjon-probe}
+    \end{center}
     \end{table}
 
 \clearpage
@@ -186,9 +203,9 @@ Denne kretsen er designet for å drives av 5V strom. Gruppen rakk ikke å lage b
     1 & 0 & 1 \cellcolor[gray]{0.8} & 0 \\ \hline
     \end{tabular}
     \end{center}
+    \label{juul}
     \caption{Resultat $S_0=\neg Q_0$}
     \end{table}
-
 
     \begin{table}[H]
     \begin{center}
