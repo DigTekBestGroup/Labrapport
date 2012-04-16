@@ -58,10 +58,8 @@ gir ut et trebits binærtall mellom 001 og 110, som er henholdsvis 1 og 6. Logik
 
     \subsection{Tilfeldig tallgenerator}
     Den tilfeldige tallgeneratoren baser en teller som teller fra 1 til 6 i en evig loop. Dette skjer vet at når telleren overstiger verdien seks begynner den å telle på en igjen. Telleren blir klokket av en oscillator som svinger
-    veldig raskt, dette gjør at verdien til telleren skifter så fort at vi kan si det er tilfeldig hvilket tall som kommer ut når man slipper bryteren. Denne oscillatoren består av en NAND- og en NOR-port, i tillegg til noen motstander og kondensatorer. Se figur under:
-    \\
-    \\
-    \textbf{Her burde vi kanskje ha et bilde?} 
+    veldig raskt, dette gjør at verdien til telleren skifter så fort at vi kan si det er tilfeldig hvilket tall som kommer ut når man slipper bryteren. Denne oscillatoren består av en NAND- og en NOR-port, i tillegg til noen motstander og kondensatorer.
+
 
     
     \subsection{Lysdioder}
@@ -111,7 +109,13 @@ gir ut et trebits binærtall mellom 001 og 110, som er henholdsvis 1 og 6. Logik
 Forarbeidet til denne laboratorieøvelsen leder en frem til et ferdigstilt og fungerende kretskort som genererer tallene til en terning, med andre ord, tall mellom en og seks. Selve laboratoriedelen består av lodding og sammenkobling av tallgeneratoren og diodene.
 \\
 \\
-Det aller første som må gjøres i denne laben er å lodde på alle komponentene til et av krestkortene. En må lodde opp diodene, IC-soklene, motstander osv. Når dette er gjort er en nødt til å bruke oscilloskopet til å kontrollere at tallgeneratoren fungerer (Se vedlegg 3). Bruk probe 'auto-check' på alle utgitte prober og se til at de alle får en melding om 'passed'. For å kontrollere at tallgeneratoren fungerer bruker en proben som er utgitt på labplassen. Koble proben opp mot oscilloskopet og gjennomfør målingene ved å holde proben inntil pinne 3 på U2. Hold deretter proben inntil 
+Det aller første som må gjøres i denne laben er å lodde på alle komponentene til et av krestkortene. En må lodde opp diodene, IC-soklene, motstander osv. Når dette er gjort er en nødt til å bruke oscilloskopet til å kontrollere at tallgeneratoren fungerer (Se vedlegg 3). Bruk probe 'auto-check' på alle utgitte prober og se til at de alle får en melding om 'passed'. For å kontrollere at tallgeneratoren fungerer bruker en proben som er utgitt på labplassen. Koble proben opp mot oscilloskopet og gjennomfør målingene ved å holde proben inntil pinne 3 på U2. Hold deretter proben inntil Q2, Q1 og Q0 og mål på samme måte som målingen på U2. 
+\\
+\\
+Underveis i laben skal også oscilloskopet benyttes til å måle S0-S4. Dersom en sammenlikner målingene med sannsynligheten for hvert signal når det er aktivt med utregningene i forarbeidet ser en at signalene på oscilloskopet stemmer med teorien.
+\\
+\\
+Til slutt utføres det 60 trykk på terningen. Hold inne knappen på kretskortet. Dette gjøres for å kontrollere at sannsynligheten for de forskjellige tallene er "tilfeldige". Resultatene skrives ned og finnes under "Resultater". 
 \clearpage
 
 
@@ -297,9 +301,8 @@ Alt i alt kan vi konkludere at med den enkle teorien som er brukt i oppgaven kan
 \section{Litteraturhenvisninger}
 $[1]$\textit{Laboratoriehefte} \\
 \\
-$[2]$\\
+$[2]$Daniel D. Gajski and Prentice Hall: \textit{Principles of Digital Design} (Trenger: Utgavenummer, Forlag og utgivelsessted) \\ %Mulighet for å få inn & istedet for AND?
 \\
-$[3]$\\
 
 \clearpage
 
