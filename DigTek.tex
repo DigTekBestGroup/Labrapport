@@ -75,7 +75,7 @@ gir ut et trebits binærtall mellom 001 og 110, som er henholdsvis 1 og 6. Logik
     \end{center}
     \end{figure}
 
-    \subsection{Logikkken}
+    \subsection{Logikken}
     Logikken sin oppgave er å oversette signalene Q2-Q0 som representerer den binære verdien til hvilket tall terningen skal gi, til styresignalene S3-S0 som styrer lysene på terningen. Et poeng er å gjøre kretsen så effektiv som mulig, for å oppnå dette brukte vi Karnaugh-Diagram. Utledningen som ble gjørt er lagt ved som Vedlegg 1 og Vedlegg 2. En kort oppsumering av resultatet vises i tabellen under.
 
     \begin{table}[H] 
@@ -107,16 +107,32 @@ gir ut et trebits binærtall mellom 001 og 110, som er henholdsvis 1 og 6. Logik
 \clearpage
 
 \section{Målemetode og arbeidsbeskrivelse}
-Det aller første som må gjøres i denne laben er å lodde på alle komponentene til et av krestkortene. En må lodde opp diodene, IC-soklene, motstander osv. Når dette er gjort er en nødt til å bruke oscilloskopet til å kontrollere at tallgeneratoren fungerer.
-\textbf{Her kommer det mer...}
+Forarbeidet til denne laboratorieøvelsen leder en frem til et ferdigstilt og fungerende kretskort som genererer tallene til en terning, med andre ord, tall mellom en og seks. Selve laboratoriedelen består av lodding og sammenkobling av tallgeneratoren og diodene.
+\\
+\\
+Det aller første som må gjøres i denne laben er å lodde på alle komponentene til et av krestkortene. En må lodde opp diodene, IC-soklene, motstander osv. Når dette er gjort er en nødt til å bruke oscilloskopet til å kontrollere at tallgeneratoren fungerer (Se vedlegg 3). Bruk probe 'auto-check' på alle utgitte prober og se til at de alle får en melding om 'passed'. For å kontrollere at tallgeneratoren fungerer bruker en proben som er utgitt på labplassen. Koble proben opp mot oscilloskopet og gjennomfør målingene ved å holde proben inntil pinne 3 på U2. Hold deretter proben inntil 
 \clearpage
 
 
 \section{Utstyrsliste} 
-    \begin{itemize} %Punktliste
-    \item liste     %Punkt i listen
-    \item for
-    \item eksempel
+    \begin{itemize} 
+    \item Kretskort
+
+Serienumber: ZBX0512.169630-423
+    \item Spenningskilde
+
+Enhetsnummer: 74
+    \item Plassnummer 47
+    \item Multimeter
+
+Enhetsnummer: 37
+    \item Loddebolt
+
+Enhetsnummer: 59
+    \item Oscilloskop
+
+Serienumber: G04-0281
+
     \end{itemize}
 \clearpage
 
@@ -213,6 +229,25 @@ Denne kretsen er designet for å drives av 5V strom. Gruppen rakk ikke å lage b
     \end{center}
     \caption{Resultat $S_3=\neg Q_2 + \neg Q_1$}
     \end{table}
+\clearpage
+
+    \subsection{Vedlegg 3: Oscillatorbilder}
+    \begin{figure}[H]
+    \begin{center}
+    \includegraphics[scale=1.0]{Fig1.png}
+    \caption{Oscillatorfrekvens målt på pinne 3 på U2.}
+    \end{center}
+    \label{fig:Oscillatorbilde1}
+    \end{figure}
+
+    \begin{figure}[H]
+    \begin{center}
+    \includegraphics[scale=1.0]{Fig2.png}
+    \caption{Måling med probene Q2, Q1 og Q0.}
+    \end{center}
+    \label{fig:Oscillatorbilde2}
+    \end{figure}
+
 
 \clearpage
 
