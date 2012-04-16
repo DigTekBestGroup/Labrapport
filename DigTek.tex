@@ -11,7 +11,7 @@
 \usepackage{colortbl}
 \usepackage{array}
 
-\begin {document}
+\begin{document}
 \includepdf{titlepage}
 \clearpage
 
@@ -26,9 +26,10 @@
 
 \section*{Sammendrag}
 \thispagestyle{empty}  
-I denne rapporten blir det beskrevet hvordan gruppen utførte en laboppgave hvor målet var å lage en digital krets, ved hjelp av diskrete portkretser, som styrer lysdioder slik at de danner mønstrene til en vanlig sekssidet terning. Et viktig poeng er at terningen skal ha en uniform verdidistribusjon, slik at den oppfører seg som en virkelig terning.
 
-Etter å ha kommet frem til et design på papiret, ble kretsene loddet opp og testet. Gruppen fikk produsert to kretser som viste tilfeldige terningmønstre, som etter 60 testkjøringer viste seg å ha en uniform distribusjon av verdier. Et tredje kretskort ble startet på, men ikke fullført i tide.
+I denne rapporten blir det beskrevet hvordan gruppen utførte en laboppgave hvor målet var å lage en digital krets. Dette ble gjort ved hjelp av (Var det diskrete portkretser?) diskrete portkretser() som styrer lysdioder som igjen danner mønstrene til en vanlig sekssidet terning. Et viktig poeng er at terningen skal ha en uniform verdidistribusjon, slik at den oppfører seg som en virkelig terning.\\
+\\
+Etter å ha kommet frem til et design på papiret, ble kretsene loddet opp og testet. Gruppen fikk produsert to kretser som viste tilfeldige terningmønstre, som etter 60 testkjøringer viste seg å ha en uniform distribusjon av verdier.() Et tredje kretskort ble startet på, men ikke fullført i tide.()
 \clearpage
 
 \tableofcontents %Innholdsfortegnelse. Genereres automatisk. :)
@@ -48,7 +49,8 @@ Terningen består av tre hoveddeler [fig. \ref{fig:blokkskjema}]: En tilfeldig t
 
 \section{Teoretisk grunnlag}
 Terningen består av tre hoveddeler som vi skal forklare hvordan fungerer. Det er en tilfeldig tallgenerator som til enhver tid
-gir ut et trebits binærtall mellom 001 og 110, som er henholdsvis 1 og 6. Logikken skal så oversette denne tallrekken til et nytt firebits binærmønster som styrer lysdiodene. Til slutt er lysdiodene som lyser et tall mellom en og seks som vist på en terning. Se figur under:
+gir ut et trebits binærtall mellom 001 og 110, som er henholdsvis 1 og 6. Logikken skal så oversette denne tallrekken til et nytt firebits binærmønster som styrer lysdiodene. Til slutt er lysdiodene som lyser et tall mellom en og seks som vist på en terning. Se figur under.
+
 \begin{figure}[H]
 \includegraphics{Blokkskjema.png}
 \caption{Hoveddelene til terningen}
@@ -57,12 +59,12 @@ gir ut et trebits binærtall mellom 001 og 110, som er henholdsvis 1 og 6. Logik
 
     \subsection{Tilfeldig tallgenerator}
     Den tilfeldige tallgeneratoren baser en teller som teller fra 1 til 6 i en evig loop. Dette skjer vet at når telleren overstiger verdien seks begynner den å telle på en igjen. Telleren blir klokket av en oscillator som svinger
-    veldig raskt, dette gjør at verdien til telleren skifter så fort at vi kan si det er tilfeldig hvilket tall som kommer ut når man slipper bryteren. Denne oscillatoren består av en NAND- og en NOR-port, i tillegg til noen motstander og kondensatorer. Se figur under:
+    veldig raskt, dette gjør at verdien til telleren skifter så fort at vi kan si det er tilfeldig hvilket tall som kommer ut når man slipper bryteren. Denne oscillatoren består av en NAND- og en NOR-port, i tillegg til noen motstander og kondensatorer.
 
     
     \subsection{Lysdioder}
     Lysdiodene på kretskortet som vi bruker til å vise hvilket tall terningen får er aktiv lave. Det vil si at dersom de får inn '0'
-    så vil de lyse. Selv om dette kan virke forvirrende er det hensiktsmessig fordi det fører til at vi får mindre indre motstand. Dette fører igjen til at vi får mer strøm som gir sterkere lys. For å gi ut alle tallene en terning kan gi, ved en mest mulig lik tilnærming trenger vi 7 lysdioder og 4 styresignal. Grunnen til at vi bare trenger 4 styresignal til 7 lysdioder er fordi noen av dem kan kontroleres med samme styresignal. Hvilket dioder som lyser samtidig er markert på figuren under:
+    så vil de lyse. Selv om dette kan virke forvirrende er det hensiktsmessig fordi det fører til at vi får mindre indre motstand. Dette fører igjen til at vi får mer strøm som gir sterkere lys. For å gi ut alle tallene en terning kan gi, ved en mest mulig lik tilnærming trenger vi 7 lysdioder og 4 styresignal. Grunnen til at vi bare trenger 4 styresignal til 7 lysdioder er fordi noen av dem kan kontroleres med samme styresignal. Hvilket dioder som lyser samtidig er markert på figuren under.
 
     \begin{figure}[H]
     \begin{center}
@@ -72,8 +74,8 @@ gir ut et trebits binærtall mellom 001 og 110, som er henholdsvis 1 og 6. Logik
     \end{center}
     \end{figure}
 
-    \subsection{Logikkken}
-    Logikken sin oppgave er å oversette signalene Q2-Q0 som representerer den binære verdien til hvilket tall terningen skal gi, til styresignalene S3-S0 som styrer lysene på terningen. Et poeng er å gjøre kretsen så effektiv som mulig, for å oppnå dette brukte vi Karnaugh-Diagram. Utledningen som ble gjørt er lagt ved som Vedlegg 1 og Vedlegg 2. En kort oppsumering av resultatet vises i tabellen under.
+    \subsection{Logikken}
+    Logikken sin oppgave er å oversette signalene Q2-Q0 som representerer den binære verdien til hvilket tall terningen skal gi, til styresignalene S3-S0 som styrer lysene på terningen. Et poeng er å gjøre kretsen så effektiv som mulig, for å oppnå dette brukte vi Karnaugh-Diagram. Utledningen som ble gjørt er lagt ved som Vedlegg 1 og Vedlegg 2. En kort oppsumering av resultatet vises i tabellen under.\\
 
     \begin{table}[H] 
     \begin{center}
@@ -91,7 +93,7 @@ gir ut et trebits binærtall mellom 001 og 110, som er henholdsvis 1 og 6. Logik
 
 \end{table}
 
-    Ut fra denne tabellen kan vi sette opp hvordan den totale kretsen skal bli når vi kobler den sammen. Resultatet er fremstil på bilde under: 
+    (Kan vi få denne til å starte helt til venstre?)Ut fra denne tabellen kan vi sette opp hvordan den totale kretsen skal bli når vi kobler den sammen. Resultatet er fremstil på bilde under.() 
 
     \begin{figure}[H]
     \includegraphics[scale=0.75]{Krestkortet.png}
@@ -99,33 +101,100 @@ gir ut et trebits binærtall mellom 001 og 110, som er henholdsvis 1 og 6. Logik
     \label{fig:kretskortet}
     \end{figure}
 
-    Som en ser på bilde har vi lagd inverterere ved å koble samme inngangsignal i begge inngangene på en NAND- eller NOR-port. Vi kunne oppnådd samme effekt dersom vi koblet en av inngangene til jord.    
+    (Kan vi få denne til å starte helt til venstre?)Som en ser på bilde har vi lagd inverterere ved å koble samme inngangsignal i begge inngangene på en NAND- eller NOR-port. Vi kunne oppnådd samme effekt dersom vi koblet en av inngangene til jord.()    
 
 \clearpage
 
 \section{Målemetode og arbeidsbeskrivelse}
+()Bør ikke alt dette skrives om til fortid?()
+Forarbeidet til denne laboratorieøvelsen leder en frem til et ferdigstilt og fungerende kretskort som genererer tallene til en terning, med andre ord, tall mellom en og seks. Selve laboratoriedelen består av lodding og sammenkobling av tallgeneratoren og diodene.
+\\
+\\
+Det aller første som må gjøres i denne laben er å lodde på alle komponentene til et av krestkortene. En må lodde opp diodene, IC-soklene, motstander osv. Når dette er gjort er en nødt til å bruke oscilloskopet til å kontrollere at tallgeneratoren fungerer (Se vedlegg 3). Bruk probe 'auto-check' på alle utgitte prober og se til at de alle får en melding om 'passed'. For å kontrollere at tallgeneratoren fungerer bruker en proben som er utgitt på labplassen. Koble proben opp mot oscilloskopet og gjennomfør målingene ved å holde proben inntil pinne 3 på U2. Hold deretter proben inntil Q2, Q1 og Q0 og mål på samme måte som målingen på U2. 
+\\
+\\
+Underveis i forsøket skal også oscilloskopet benyttes til å måle S0-S4. Dersom en sammenlikner målingene med sannsynligheten for hvert signal når det er aktivt med utregningene i forarbeidet ser en at signalene på oscilloskopet stemmer med teorien.
+\\
+\\
+Til slutt utføres det 60 trykk på terningen. Hold inne knappen på kretskortet. Dette gjøres for å kontrollere at sannsynligheten for de forskjellige tallene er (Hvorfor gåseøyne?) "tilfeldige". Resultatene skrives ned og finnes under (Hvorfor gåseøyne?)Resultater". 
 \clearpage
 
 
 \section{Utstyrsliste} 
-    \begin{itemize} %Punktliste
-    \item liste     %Punkt i listen
-    \item for
-    \item eksempel
+    \begin{itemize} 
+    \item Kretskort
+
+Serienumber: ZBX0512.169630-423
+    \item Spenningskilde
+
+Enhetsnummer: 74
+    \item Plassnummer 47
+    \item Multimeter
+
+Enhetsnummer: 37
+    \item Loddebolt
+
+Enhetsnummer: 59
+    \item Oscilloskop
+
+Serienumber: G04-0281
+
     \end{itemize}
 \clearpage
 
 
 \section{Resultater}
-Gruppen fikk ferdigstillt og testet to terningkretser. Den 3. terningen ble ikke ferdig.
-Denne kretsen er designet for å drives av 5V strom. Gruppen rakk ikke å lage batteriadapter.
+Gruppen fikk ferdigstilt og testet to terningkretser. Terningene er konstruert for å drives av en 5V spenningskilde, men gruppen rakk ikke å lage en batteriadapter. 
+
+
+\begin{table}[H]
+    \begin{center}
+    \begin{tabular}{|c|c|}
+    \hline
+    Verdi & Antall ganger\\ \hline
+    1 & 13 \\ \hline
+    2 & 8  \\ \hline
+    3 & 10 \\ \hline
+    4 & 8  \\ \hline
+    5 & 10 \\ \hline
+    6 & 11 \\ \hline
+    \end{tabular}
+    \caption{Probabilitetsdistribusjon etter 60 'kast' på den første terningen.}
+    \label{tbl:probabilitetsdistribusjon}
+    \end{center}
+    \end{table}
+
+
+\begin{table}[H]
+    \begin{center}
+    \begin{tabular}{|c|c|c|}
+    \hline
+    Pinne & $\frac{T_H}{T_D}$ (ms) & Probabilitet   \\[1mm] \hline
+    $S_0$ & $\frac{1.13}{2.26}$  & $\frac{1}{2}$    \\[1mm] \hline
+    $S_1$ & $\frac{1.13}{6.78}$  & $\frac{1}{6}$    \\[1mm] \hline
+    $S_2$ & $\frac{3.39}{6.78}$  & $\frac{1}{2}$    \\[1mm]\hline
+    $S_3$ & $\frac{5.65}{6.78}$  & $\frac{5}{6}$    \\[1mm] \hline
+    \end{tabular}
+    \caption{Probabilitetsdistribusjon for pinnene $S_0 - S_3$  på kretsen som styrer lysdiodene}
+    \label{tbl:probe}
+    \end{center}
+    \end{table}
 
 \clearpage
 
 \section{Diskusjon}
+Resultatet bekrefter at implementeringen er rett, de 60 kastene ble så jevnt fordelt som vi kunne forvente med så få kast. Vår analyse av utgangssignalene $S_0 - S_3$ (tabell \ref{tbl:probe})ble akkurat som forventet ut ifra forarbeidet. Som en kan se i tabell [\ref{tbl:probabilitetsdistribusjon}], fikk vi alle kombinasjoner av øyne som en terning kan gi, og ingen ulovlige verdier. Vi anser det som at implementeringen av terningen var vellykket, og at det ikke er noen defekte deler eller feil i logikken. 
+
+
 \clearpage
 
 \section{Konklusjon}
+Gruppen konkluder med at det med god planlegging og godt forarbeid lar seg gjøre å bruke logiske kretser til å lage en digital terning. Man kan se at det er mulig å simulere en tilfeldig tallgenerator ved å traversere gjennom et intervall, så lenge frekvensen er høy nok til at et menneske umulig kan forutsi resultatet. \\
+\\
+For å kunne konkludere med høyere sikkerhet at terningen er riktig implementert burde vi testet med flere enn 60 forsøk at terningen gav en jevn fordeling av verdier. Men ut ifra de testene vi gjorde var resultatet lovende. \\
+\\
+Alt i alt kan vi konkludere at med den enkle teorien som er brukt i oppgaven kan vi lage et reelt produkt som fungerer. 
+
 \clearpage
 
 \section{Vedlegg}
@@ -134,7 +203,7 @@ Denne kretsen er designet for å drives av 5V strom. Gruppen rakk ikke å lage b
     \begin{center}
     \begin{tabular}{|c|c|c|c|c|c|c|c|c|}
     \hline
-    Hex & \multicolumn{3}{|c|}{Binærverdi} & \multicolumn{4}{|c|}{Styresignal}&hex \\ \hline
+    Hex & \multicolumn{3}{c}{Binærverdi} & \multicolumn{4}{|c|}{Styresignal}&hex \\ \hline
     $Q$ & $Q_2$ & $Q_1$ & $Q_0$ & $S_3$ & $S_2$ & $S_1$ & $S_0$ & $S$ \\ \hline
     0 & 0 & 0 & 0 & X & X & X & X & - \\ \hline 
     1 & 0 & 0 & 1 & 1 & 1 & 1 & 0 & E \\ \hline
@@ -162,9 +231,9 @@ Denne kretsen er designet for å drives av 5V strom. Gruppen rakk ikke å lage b
     1 & 0 & 1 \cellcolor[gray]{0.8} & 0 \\ \hline
     \end{tabular}
     \end{center}
+    \label{juul}
     \caption{Resultat $S_0=\neg Q_0$}
     \end{table}
-
 
     \begin{table}[H]
     \begin{center}
@@ -208,10 +277,34 @@ Denne kretsen er designet for å drives av 5V strom. Gruppen rakk ikke å lage b
     \end{center}
     \caption{Resultat $S_3=\neg Q_2 + \neg Q_1$}
     \end{table}
+\clearpage
+
+    \subsection{Vedlegg 3: Oscillatorbilder}
+    \begin{figure}[H]
+    \begin{center}
+    \includegraphics[scale=1.0]{Fig1.png}
+    \caption{Oscillatorfrekvens målt på pinne 3 på U2.}
+    \end{center}
+    \label{fig:Oscillatorbilde1}
+    \end{figure}
+
+    \begin{figure}[H]
+    \begin{center}
+    \includegraphics[scale=1.0]{Fig2.png}
+    \caption{Måling med probene Q2, Q1 og Q0.}
+    \end{center}
+    \label{fig:Oscillatorbilde2}
+    \end{figure}
+
 
 \clearpage
 
 \section{Litteraturhenvisninger}
+$[1]$\textit{Laboratoriehefte} \\
+\\
+$[2]$Daniel D. Gajski and Prentice Hall: \textit{Principles of Digital Design} (Trenger: Utgavenummer, Forlag og utgivelsessted) \\ %Mulighet for å få inn & istedet for AND?
+\\
+
 \clearpage
 
 \section{Tilbakemeldinger}
