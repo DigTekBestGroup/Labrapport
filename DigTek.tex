@@ -26,8 +26,9 @@
 
 \section*{Sammendrag}
 \thispagestyle{empty}  
-I denne rapporten blir det beskrevet hvordan gruppen utførte en laboppgave hvor målet var å lage en digital krets, ved hjelp av diskrete portkretser, som styrer lysdioder slik at de danner mønstrene til en vanlig sekssidet terning. Et viktig poeng er at terningen skal ha en uniform verdidistribusjon, slik at den oppfører seg som en virkelig terning.
 
+I denne rapporten blir det beskrevet hvordan gruppen utførte en laboppgave hvor målet var å lage en digital krets, ved hjelp av diskrete portkretser, som styrer lysdioder slik at de danner mønstrene til en vanlig sekssidet terning. Et viktig poeng er at terningen skal ha en uniform verdidistribusjon, slik at den oppfører seg som en virkelig terning.\\
+\\
 Etter å ha kommet frem til et design på papiret, ble kretsene loddet opp og testet. Gruppen fikk produsert to kretser som viste tilfeldige terningmønstre, som etter 60 testkjøringer viste seg å ha en uniform distribusjon av verdier. Et tredje kretskort ble startet på, men ikke fullført i tide.
 \clearpage
 
@@ -138,15 +139,55 @@ Serienumber: G04-0281
 
 
 \section{Resultater}
-Gruppen fikk ferdigstillt og testet to terningkretser. Den 3. terningen ble ikke ferdig.
-Denne kretsen er designet for å drives av 5V strom. Gruppen rakk ikke å lage batteriadapter.
+Gruppen fikk ferdigstilt og testet to terningkretser. Terningene er konstruert for å drives av en 5V spenningskilde, men gruppen rakk ikke å lage en batteriadapter. 
+
+
+
+Tabell [\ref{tbl:probabilitetsdistribusjon}] viser resultatet av 60 kast.
+\begin{table}[H]
+    \begin{center}
+    \begin{tabular}{|c|c|}
+    \hline
+    Verdi & Antall ganger\\ \hline
+    1 & 13 \\ \hline
+    2 & 8  \\ \hline
+    3 & 10 \\ \hline
+    4 & 8  \\ \hline
+    5 & 10 \\ \hline
+    6 & 11 \\ \hline
+    \end{tabular}
+    \caption{Probabilitetsdistribusjon etter 60 'kast' på den første terningen.}
+    \label{tbl:probabilitetsdistribusjon}
+    \end{center}
+    \end{table}
+
+
+\begin{table}[H]
+    \begin{center}
+    \begin{tabular}{|c|c|c|}
+    \hline
+    Pinne & $\frac{T_H}{T_D}$ (ms) & Probabilitet   \\[1mm] \hline
+    $S_0$ & $\frac{1.13}{2.26}$  & $\frac{1}{2}$    \\[1mm] \hline
+    $S_1$ & $\frac{1.13}{6.78}$  & $\frac{1}{6}$    \\[1mm] \hline
+    $S_2$ & $\frac{3.39}{6.78}$  & $\frac{1}{2}$    \\[1mm]\hline
+    $S_3$ & $\frac{5.65}{6.78}$  & $\frac{5}{6}$    \\[1mm] \hline
+    \end{tabular}
+    \caption{Probabilitetsdistribusjon for pinnene $S_0 - S_3$  på kretsen som styrer lysdiodene}
+    \label{tbl:probe}
+    \end{center}
+    \end{table}
 
 \clearpage
 
 \section{Diskusjon}
+Resultatet bekrefter at implementeringen er rett, de 60 kastene ble så jevnt fordelt som vi kunne for vente med så få kast. Vår analyse av utgangssignalene $S_0 - S_3$ (tabell \ref{tbl:probe})ble akkurat som forventet ut ifra forarbeidet. Som en kan se i tabell [\ref{tbl:probabilitetsdistribusjon}], fikk vi alle kombinasjoner av øyne som en terning kan gi, og ingen ulovlige verdier. Vi anser det som at implementeringen av terningen var vellykket, og at det ikke er noen defekte deler eller feil i logikken. 
+
+
 \clearpage
 
 \section{Konklusjon}
+
+
 \clearpage
 
 \section{Vedlegg}
@@ -155,7 +196,7 @@ Denne kretsen er designet for å drives av 5V strom. Gruppen rakk ikke å lage b
     \begin{center}
     \begin{tabular}{|c|c|c|c|c|c|c|c|c|}
     \hline
-    Hex & \multicolumn{3}{|c|}{Binærverdi} & \multicolumn{4}{|c|}{Styresignal}&hex \\ \hline
+    Hex & \multicolumn{3}{c}{Binærverdi} & \multicolumn{4}{|c|}{Styresignal}&hex \\ \hline
     $Q$ & $Q_2$ & $Q_1$ & $Q_0$ & $S_3$ & $S_2$ & $S_1$ & $S_0$ & $S$ \\ \hline
     0 & 0 & 0 & 0 & X & X & X & X & - \\ \hline 
     1 & 0 & 0 & 1 & 1 & 1 & 1 & 0 & E \\ \hline
@@ -183,9 +224,9 @@ Denne kretsen er designet for å drives av 5V strom. Gruppen rakk ikke å lage b
     1 & 0 & 1 \cellcolor[gray]{0.8} & 0 \\ \hline
     \end{tabular}
     \end{center}
+    \label{juul}
     \caption{Resultat $S_0=\neg Q_0$}
     \end{table}
-
 
     \begin{table}[H]
     \begin{center}
